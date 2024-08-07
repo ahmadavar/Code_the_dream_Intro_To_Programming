@@ -1,12 +1,22 @@
-body {
-    background-color: #f0f0f0;
-    color: #333;
+header {
+    background-color: #4a4a4a;
+    color: blanchedalmond;
+    text-align: center;
+    padding: 25px 0;
+    margin-bottom: 25px;
 }
-img.profile-pic {
-    display: block;
-    margin: 20px auto;
-    border-radius: 50%;
-    width: 50px; /* Set the width you want */
-    height: 50px; /* Set the height you want */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+
+main {
+    background-color: #e4e4e4;
+    width: 600px;
+    padding: 25px;
+    border: solid 5px red;
+}
+
+footer {
+    background-color: darkolivegreen;
+    color: azure;
+    text-align: center;
+    padding: 25px 25px;
+    margin-top: 25px`;
 }
