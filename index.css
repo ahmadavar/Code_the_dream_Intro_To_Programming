@@ -73,7 +73,7 @@ img.profile-pic {
     display: block;
     margin: 20px auto;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+    width: 50px; /* Set the width you want */
+    height: 50px; /* Set the height you want */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
 }
