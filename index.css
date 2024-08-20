@@ -1,12 +1,77 @@
-body {
-    background-color: #f0f0f0;
-    color: #333;
+header {
+    background-color: #4a4a4a;
+    color: blanchedalmond;
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
 }
-img.profile-pic {
-    display: block;
-    margin: 20px auto;
-    border-radius: 50%;
-    width: 50px; /* Set the width you want */
-    height: 50px; /* Set the height you want */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+
+main {
+    background-color: #e4e4e4;
+    width: 90%;
+    padding: 2rem;
+    border: solid 0.5rem red;
+    margin: 0 auto; /* Centering content */
+}
+
+footer {
+    background-color: darkolivegreen;
+    color: azure;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.Profile_pic {
+    display: block;  
+    width: 50%; 
+    height: auto;  
+    border-radius: 50%;  
+    border: 0.2rem solid #ccc;  
+    margin: 0 auto;  
+    object-fit: cover; 
+}
+
+/* For tablets */
+@media (min-width: 768px) {
+    header {
+        padding: 3rem 0;
+        margin-bottom: 3rem;
+    }
+
+    main {
+        width: 70%;
+        padding: 3rem;
+    }
+
+    footer {
+        padding: 3rem;
+        margin-top: 3rem;
+    }
+
+    .Profile_pic {
+        width: 40%;
+    }
+}
+
+/* For Desktop*/
+@media (min-width: 1024px) {
+    header {
+        padding: 4rem 0;
+        margin-bottom: 4rem;
+    }
+
+    main {
+        width: 50%;
+        padding: 4rem;
+    }
+
+    footer {
+        padding: 4rem;
+        margin-top: 4rem;
+    }
+
+    .Profile_pic {
+        width: 30%;
+    }
 }
