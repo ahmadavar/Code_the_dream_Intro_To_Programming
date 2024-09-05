@@ -1,39 +1,60 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Couple Words About me</title>
-        <style>
-            p {
-                font-size: 16px;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Ahmad</h1>
-        <p> I am <strong>a data analyst living in the San Francisco Bay Area</strong>, and <strong>excited about coding and loves taking the pictures of the outdoors</strong>.</p>
-        
-        <img src="images/Sunset.webp" alt="Beautiful sunset">
-        
-        <h2>Career and Interests</h2>
-        
-        <h3>Data Analysis</h3>
-        <p>Professional data analyst with a focus on <strong>creating actionable insights and solving complex problems</strong>. Myexpertise includes <em>SQL</em>, <em>App Script</em>, and <strong>collaborating with diverse teams</strong>.</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couple Words About Me</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <h1>About</h1>
+    <p>I am <strong>a data analyst living in the San Francisco Bay Area</strong>, and <strong>excited about coding and loves taking pictures of the outdoors</strong>.</p>
+    
+    <img src="images/Sunset.webp" alt="Beautiful sunset">
+    
+    <h2>Career and Interests</h2>
+    
+    <h3>Data Analysis</h3>
+    <p>Professional data analyst with a focus on <strong>creating actionable insights and solving complex problems</strong>. My expertise includes <em>SQL</em>, <em>App Script</em>, and <strong>collaborating with diverse teams</strong>.</p>
 
-        <p>My passion for data analysis is matched by my <strong>enthusiasm for coding</strong>. I enjoy <em>exploring new technologies</em> and applying his skills to drive <strong>innovative solutions</strong>.</p>
+    <p>My passion for data analysis is matched by my <strong>enthusiasm for coding</strong>. I enjoy <em>exploring new technologies</em> and applying my skills to drive <strong>innovative solutions</strong>.</p>
 
-        <p>In addition to my professional skills, I am an <strong>avid outdoor enthusiast</strong>. I love <em>hiking</em>, <em>camping</em>, and exploring <strong>nature</strong>, which provides a perfect balance to my analytical work.</p>
+    <p>In addition to my professional skills, I am an <strong>avid outdoor enthusiast</strong>. I love <em>hiking</em>, <em>camping</em>, and exploring <strong>nature</strong>, which provides a perfect balance to my analytical work.</p>
+    
+    <h3>Personal Life</h3>
+    <p>Residing in the <strong>San Francisco Bay Area</strong>, where I find <em>inspiration</em> and <strong>creative energy</strong> from the vibrant tech community and stunning landscapes.</p>
+
+    <p>I am also interested in <strong>DIY projects</strong> and <em>exploring different cultures</em>, which adds a rich dimension to my life outside of work.</p>
+    
+    <h2>Navigation</h2>
+    <ul>
+        <li><a href="index.html">Back home</a></li>
+        <li><a href="career.html">Career Journey</a></li>
+        <li><a href="projects.html">My projects</a></li>
+    </ul>
+
+    <section id="message-form">
+        <h2>Leave a Message</h2>
+        <form name="leave_message">
+            <label for="usersName">Name:</label>
+            <input type="text" name="usersName" id="usersName" required>
+            
+            <label for="usersEmail">Email:</label>
+            <input type="email" name="usersEmail" id="usersEmail" required>
+            
+            <label for="usersMessage">Message:</label>
+            <textarea name="usersMessage" id="usersMessage" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!--Used Prettier for increasing readability -->
+    <section id="messages">
         
-        <h3>Personal Life</h3>
-        <p>Residing in the <strong>San Francisco Bay Area</strong>, where I find <em>inspiration</em> and <strong>creative energy</strong> from the vibrant tech community and stunning landscapes.</p>
+        <ul></ul>
+    </section>
 
-        <p>I also interested in <strong>DIY projects</strong> and <em>exploring different cultures</em>, which adds a rich dimension in my life outside of work.</p>
-        
-        <h2>Navigation</h2>
-        <ul>
-            <li><a href="index.html">Back home</a></li>
-            <li><a href="career.html">Career Journey</a></li>
-            <li><a href="projects.html">My projects</a></li>
-        </ul>
-
-    </body>
+    <script src="js/index.js"></script>
+</body>
 </html>
