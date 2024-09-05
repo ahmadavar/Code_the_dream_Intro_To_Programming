@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+h1, h2, h3 {
+    color: #2c3e50;
+}
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+h2 {
+    margin-top: 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+h3 {
+    margin-top: 15px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin: 5px 0;
+}
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+a:hover {
+    text-decoration: underline;
+}
+section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background: red#2980b9;
+}
+#messages ul {
+    padding: 0;
+    list-style-type: none;
+}
+#messages li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    position: relative;
+}
+#messages button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+#message-form,
+#messages {
+    margin-bottom: 20px;
+}
+#message-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
