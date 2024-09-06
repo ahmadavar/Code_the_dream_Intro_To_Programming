@@ -9,17 +9,20 @@ const copyright = document.createElement('p');
 copyright.innerHTML = `Ahmad &copy; ${thisYear}`;
 footer.appendChild(copyright);
 
-const skills = ["Tableau", "HTML", "CSS", "JavaScript", "Google Analytics"];
-const skillsSection = document.querySelector('#skills');
+// Add a link to Tableau Public visualization in the skills array
+const skills = [
+    "My Tableau Public Viz can be accessed at this link: <a href='https://public.tableau.com/views/ChemCorpSpringboard/ChemCorp?:language=en-US&:display_count=n&:origin=viz_share_link' target='_blank'>Tableau Visualization</a>"
+];
 
+const skillsSection = document.querySelector('#skills');
 const skillsList = skillsSection.querySelector('ul');
 
+// Append the Tableau link as an HTML string
 skills.forEach((skillText) => {
     const skill = document.createElement('li');
-    skill.innerText = skillText;
+    skill.innerHTML = skillText;  // Use innerHTML to render the HTML link correctly
     skillsList.appendChild(skill);
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const messageForm = document.querySelector('form[name="leave_message"]');
@@ -60,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const githubUsername = 'ahmadavar'; 
     const projectSection = document.querySelector('#projects');
@@ -85,7 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             repositories.forEach(repo => {
                 const repoItem = document.createElement('li');
-                repoItem.innerText = repo.name;
+                const repoLink = document.createElement('a');
+                repoLink.href = repo.html_url;  // GitHub repo URL
+                repoLink.innerText = repo.name; // Repo name
+                repoLink.target = '_blank';     // Open in new tab
+
+                // Add the link to the list item
+                repoItem.appendChild(repoLink);
                 repoList.appendChild(repoItem);
             });
         })
