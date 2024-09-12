@@ -9,7 +9,7 @@ const copyright = document.createElement('p');
 copyright.innerHTML = `Ahmad &copy; ${thisYear}`;
 footer.appendChild(copyright);
 
-// Add a link to Tableau Public visualization in the skills array
+
 const skills = [
     "My Tableau Public Viz can be accessed at this link: <a href='https://public.tableau.com/views/ChemCorpSpringboard/ChemCorp?:language=en-US&:display_count=n&:origin=viz_share_link' target='_blank'>Tableau Visualization</a>"
 ];
@@ -17,10 +17,10 @@ const skills = [
 const skillsSection = document.querySelector('#skills');
 const skillsList = skillsSection.querySelector('ul');
 
-// Append the Tableau link as an HTML string
+
 skills.forEach((skillText) => {
     const skill = document.createElement('li');
-    skill.innerHTML = skillText;  // Use innerHTML to render the HTML link correctly
+    skill.innerHTML = skillText;  
     skillsList.appendChild(skill);
 });
 
@@ -88,11 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
             repositories.forEach(repo => {
                 const repoItem = document.createElement('li');
                 const repoLink = document.createElement('a');
-                repoLink.href = repo.html_url;  // GitHub repo URL
-                repoLink.innerText = repo.name; // Repo name
-                repoLink.target = '_blank';     // Open in new tab
+                repoLink.href = repo.html_url;  
+                repoLink.innerText = repo.name; 
+                repoLink.target = '_blank';    
 
-                // Add the link to the list item
+                
                 repoItem.appendChild(repoLink);
                 repoList.appendChild(repoItem);
             });
@@ -102,5 +102,26 @@ document.addEventListener('DOMContentLoaded', () => {
             const errorMessage = document.createElement('p');
             errorMessage.innerText = 'Error loading repositories. Please try again later.';
             projectSection.appendChild(errorMessage);
+        });
+
+    
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=37.7749&longitude=-122.4194&current_weather=true')
+        .then(response => response.json())
+        .then(data => {
+            const temperatureElement = document.getElementById('temperature');
+            const conditionElement = document.getElementById('condition');
+            const windElement = document.getElementById('wind');
+            const humidityElement = document.getElementById('humidity');
+
+        
+            temperatureElement.textContent = `Temperature: ${data.current_weather.temperature}°C`;
+            conditionElement.textContent = `Condition: ${data.current_weather.weathercode}`;
+
+          
+            windElement.textContent = `Wind Speed: ${data.current_weather.windspeed} km/h`;
+            humidityElement.textContent = `Humidity: ${data.current_weather.humidity}%`;
+        })
+        .catch(error => {
+            console.error('Error fetching weather data:', error);
         });
 });
