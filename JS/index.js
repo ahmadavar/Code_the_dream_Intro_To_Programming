@@ -111,15 +111,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const temperatureElement = document.getElementById('temperature');
             const conditionElement = document.getElementById('condition');
             const windElement = document.getElementById('wind');
-            const humidityElement = document.getElementById('humidity');
 
-        
-            temperatureElement.textContent = `Temperature: ${data.current_weather.temperature}°C`;
+        console.log(data);
+            temperatureElement.textContent = `Temperature: ${data.current_weather.temperature}°F`;
             conditionElement.textContent = `Condition: ${data.current_weather.weathercode}`;
 
           
-            windElement.textContent = `Wind Speed: ${data.current_weather.windspeed} km/h`;
-            humidityElement.textContent = `Humidity: ${data.current_weather.humidity}%`;
+            windElement.textContent = `Wind Speed: ${data.current_weather.windspeed} m/h`;
         })
         .catch(error => {
             console.error('Error fetching weather data:', error);

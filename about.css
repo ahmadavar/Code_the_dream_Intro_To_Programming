@@ -162,11 +162,11 @@ button:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Weather section styling (added) */
+
 #weather {
-    display: flex;                /* Flexbox layout for horizontal alignment */
-    gap: 20px;                    /* Space between items */
-    justify-content: center;      /* Center align items */
+    display: flex;                
+    gap: 20px;                   
+    justify-content: center;      
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -174,8 +174,8 @@ button:hover {
 }
 
 #weather span {
-    display: inline-block;        /* Ensure span elements take up only the necessary space */
-    font-weight: bold;            /* Make the text bold for better readability */
+    display: inline-block;        
+    font-weight: bold;           
     color: #2c3e50;
 }
 
