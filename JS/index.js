@@ -9,17 +9,20 @@ const copyright = document.createElement('p');
 copyright.innerHTML = `Ahmad &copy; ${thisYear}`;
 footer.appendChild(copyright);
 
-const skills = ["Tableau", "HTML", "CSS", "JavaScript", "Google Analytics"];
-const skillsSection = document.querySelector('#skills');
 
+const skills = [
+    "My Tableau Public Viz can be accessed at this link: <a href='https://public.tableau.com/views/ChemCorpSpringboard/ChemCorp?:language=en-US&:display_count=n&:origin=viz_share_link' target='_blank'>Tableau Visualization</a>"
+];
+
+const skillsSection = document.querySelector('#skills');
 const skillsList = skillsSection.querySelector('ul');
+
 
 skills.forEach((skillText) => {
     const skill = document.createElement('li');
-    skill.innerText = skillText;
+    skill.innerHTML = skillText;  
     skillsList.appendChild(skill);
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const messageForm = document.querySelector('form[name="leave_message"]');
@@ -60,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const githubUsername = 'ahmadavar'; 
     const projectSection = document.querySelector('#projects');
@@ -85,7 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             repositories.forEach(repo => {
                 const repoItem = document.createElement('li');
-                repoItem.innerText = repo.name;
+                const repoLink = document.createElement('a');
+                repoLink.href = repo.html_url;  
+                repoLink.innerText = repo.name; 
+                repoLink.target = '_blank';    
+
+                
+                repoItem.appendChild(repoLink);
                 repoList.appendChild(repoItem);
             });
         })
@@ -94,5 +102,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const errorMessage = document.createElement('p');
             errorMessage.innerText = 'Error loading repositories. Please try again later.';
             projectSection.appendChild(errorMessage);
+        });
+
+    
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=37.7749&longitude=-122.4194&current_weather=true')
+        .then(response => response.json())
+        .then(data => {
+            const temperatureElement = document.getElementById('temperature');
+            const conditionElement = document.getElementById('condition');
+            const windElement = document.getElementById('wind');
+
+        console.log(data);
+            temperatureElement.textContent = `Temperature: ${data.current_weather.temperature}°F`;
+            conditionElement.textContent = `Condition: ${data.current_weather.weathercode}`;
+
+          
+            windElement.textContent = `Wind Speed: ${data.current_weather.windspeed} m/h`;
+        })
+        .catch(error => {
+            console.error('Error fetching weather data:', error);
         });
 });
