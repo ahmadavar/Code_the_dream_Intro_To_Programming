@@ -1,10 +1,8 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 body {
     font-family: 'Open Sans', sans-serif; 
@@ -15,14 +13,12 @@ body {
     padding: 20px;
 }
 
-
 h1 {
     text-align: center;
     color: #10496e;
     margin-bottom: 30px;
     font-size: 2.5rem;
 }
-
 
 h2, h3 {
     color: #2c3e50;
@@ -40,7 +36,6 @@ h3 {
     margin-top: 15px;
 }
 
-
 p {
     font-size: 1rem;
     line-height: 1.6;
@@ -52,7 +47,6 @@ strong {
     color: #3498db; 
 }
 
-
 img {
     display: block;
     width: 100%;
@@ -61,7 +55,6 @@ img {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 ul {
     list-style-type: none;
@@ -90,7 +83,6 @@ a:hover {
     border-color: #255473; 
 }
 
-
 section {
     background: #fff;
     padding: 20px;
@@ -100,7 +92,6 @@ section {
     max-width: 800px;
     margin: 0 auto 20px;
 }
-
 
 form {
     background: #fff;
@@ -139,7 +130,6 @@ button:hover {
     background-color: #2980b9;
 }
 
-
 #messages ul {
     padding: 0;
     list-style-type: none;
@@ -173,19 +163,35 @@ button:hover {
 }
 
 
+#weather {
+    display: flex;                
+    gap: 20px;                   
+    justify-content: center;      
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#weather span {
+    display: inline-block;        
+    font-weight: bold;           
+    color: #2c3e50;
+}
+
 @media (min-width: 768px) {
     body {
         padding: 40px;
     }
-    
+
     section {
         padding: 40px;
     }
-    
+
     form {
         padding: 30px;
     }
-    
+
     h1 {
         font-size: 3rem;
     }
